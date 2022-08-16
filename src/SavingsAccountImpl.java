@@ -16,14 +16,15 @@ public class SavingsAccountImpl {
         savingsAccount.setModeOfAccountOperation("Self Operated");
         System.out.println(" Balance : ");
         System.out.println(savingsAccount.retrieveBalance());
-        double debitAmount,creditAmount;
+        double debitAmount,creditAmount,updatedBalance;
         System.out.println(" Enter amount to be debited : ");
         debitAmount= obj.nextDouble();
         System.out.println(savingsAccount.debitAmount(debitAmount));
+        updatedBalance= savingsAccount.debitAmount(debitAmount);
         System.out.println(" Enter amount to be credited : ");
         creditAmount= obj.nextDouble();
-        System.out.println(savingsAccount.creditAmount(creditAmount));
-        System.out.println(" Details : "+ savingsAccount.toString());
+        System.out.println(savingsAccount.creditAmount(updatedBalance,creditAmount));
+        savingsAccount.displayDetails();
     }
 }
 //need to reflect the updated balance

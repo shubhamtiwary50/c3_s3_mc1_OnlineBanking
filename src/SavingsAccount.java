@@ -91,24 +91,21 @@ public class SavingsAccount {
     {
         return this.availableBalance-debitAmount;
     }
-    public double creditAmount(double creditAmount)
+    public double creditAmount(double updatedBalance, double creditAmount)
     {
-        return this.availableBalance+creditAmount;
+        return updatedBalance+creditAmount;
     }
 
-    @Override
-    public String toString() {
-        return "SavingsAccount{" +
-                "customerName='" + customerName + '\'' +
-                ", accountNumber=" + accountNumber +
-                ", accountOpeningDate='" + accountOpeningDate + '\'' +
-                ", accountStatus='" + accountStatus + '\'' +
-                ", availableBalance=" + availableBalance +
-                ", totalBalance=" + totalBalance +
-                ", onlineBankingStatus='" + onlineBankingStatus + '\'' +
-                ", interestRate=" + interestRate +
-                ", modeOfAccountOperation='" + modeOfAccountOperation + '\'' +
-                '}';
+    public void displayDetails()
+    {
+        System.out.println(" Customer name "+ customerName);
+        System.out.println("accountNumber = " + accountNumber);
+        System.out.println("accountOpeningDate = " + accountOpeningDate);
+        System.out.println("accountStatus = " + accountStatus);
+        System.out.println("availableBalance = " + availableBalance);
+        System.out.println("totalBalance = " + totalBalance);
+        System.out.println("onlineBankingStatus = " + onlineBankingStatus);
+        System.out.println("interestRate = " + interestRate);
+        System.out.println("modeOfAccountOperation = " + modeOfAccountOperation);
     }
-
 }
